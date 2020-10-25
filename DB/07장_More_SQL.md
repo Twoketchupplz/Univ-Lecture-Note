@@ -99,9 +99,9 @@
     Create ASSERTION salary_constraint
     check(not exists (
         select *
-        from employee E, employee M, department d
+        from employee E, employee M, department D
         where E.salary > M.Salary and
-            E.dno = D.dnumber and D.mgr_ssn = m.ssn) )
+            E.dno = D.dnumber and D.mgr_ssn = M.ssn) )
     ```
 - SQL을 수행한 결과가 `Where Clause`와 같으면 안된다. 쿼리 결과가 있으면 위반인 것이다.
 
@@ -110,3 +110,7 @@
 
 ## SQL Triggers
 - Assertion 제약조건을 위배 했을 때의 대응
+- ECA Rule
+    event(언제, 어떤 이벤트에서)
+    condition 어떤 조건
+    action 어떤 액션을 취할것인가
